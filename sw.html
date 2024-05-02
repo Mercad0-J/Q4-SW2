@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<style>
+    body {
+    background-image: url(https://i.pinimg.com/564x/d4/b6/fd/d4b6fdcb58cfb4f8b15426f27e682e0f.jpg);
+    background-attachment: fixed;
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:100%;	
+    }
+
+    img {
+    	margin-left: 100px;
+    	margin-right: auto;
+    	margin-top: 100px;
+    	margin-bottom: auto;
+    	border: double;
+    	border-width: 8px;
+    	border-color: white;
+    }
+
+    .input {
+    	margin-top: 150px;
+    	margin-bottom: auto;
+    	background-color: rgba(255, 255, 255, 0.6);
+    	border: dashed;
+    	border-radius: 10px;
+    	border-color: white;
+    	color: #FF69B4;
+    }
+</style>
+</head>
+
+<body>
+    <div class="container">
+    	<div class="row">
+    	<div class="col-sm-6">
+    	<img src="https://static.wikia.nocookie.net/infinite-loops/images/4/4b/Pinkie_pie_4th_wall_by_cptofthefriendship-d4mdrlt.png/revision/latest?cb=20140621023401" width="400px" height="400px" alt="PinkiePie">
+    </div>
+        <div class="col-sm-6">
+        <div class="input">
+        <h2 input1>Find the value of x and y! :333</h1>
+        <div class="form-group">
+            <label for="x">Input the value of x:</label><br>
+            <input type="number" class="form-control-sm" id="x">
+        </div>
+        <div class="form-group">
+            <label for="y">Input the value of y:</label><br>
+            <input type="number" class="form-control-sm" id="y">
+        </div>
+        
+        <br>   
+        <button onclick="performOperation('addy')" class="btn btn-light text-secondary offset-2">Find the sum of x and y</button>
+        <button onclick="performOperation('expo')" class="btn btn-light text-secondary">x raised to y</button> <br>
+        <button onclick="performOperation('sub')" class="btn btn-light text-secondary offset-2">Get the remainder</button>
+        <button onclick="performOperation('booleen')" class="btn btn-light text-secondary">Is x equal to y?</button>
+    </div>
+</div>
+</div>
+</div>
+
+    <script>
+        function performOperation(operation) {
+            let x = parseFloat(document.getElementById('x').value);
+            let y = parseFloat(document.getElementById('y').value);
+            
+            let result;
+            switch (operation) {
+                case 'addy':
+                    result = x + y;
+                    alert(`The sum of ${x} + ${y} is: ${result}`);
+                    break;
+                case 'expo':
+                    result = Math.pow(y, x);
+                    alert(` ${x} raised to ${y} is: ${result}`);
+                    break;
+                case 'sub':
+                    result = x - y;
+                    alert(` ${x} subtracted from ${y} is: ${result}`);
+                    break;
+                case 'booleen':
+                    result = (x === y);
+                    alert(` ${x} equal to ${y}? ${result}`);
+                    break;
+                default:
+                    alert('Invalid operation');
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
