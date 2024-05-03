@@ -17,7 +17,7 @@
     background-size:100%;	
     }
 
-    img {
+    .imgx {
     	margin-left: 100px;
     	margin-right: auto;
     	margin-top: 100px;
@@ -36,18 +36,47 @@
     	border-color: white;
     	color: #FF69B4;
     }
+
+
+    .imgn {
+        margin-left: 350px;
+    }
+
+
+
+    .ppie {
+        background-color: hotpink;
+        height: 100px;
+    }
+
+
 </style>
 </head>
 
 <body>
+
+<div class="ppie mt-6">
+    <div class="container"><br> 
+        <div class="row">
+         <div class="col-sm-4">
+             <img src="https://cpad.ask.fm/3cf/02644/af1f/42f0/869b/9e3e92891ae0/original/646138.png" class="imgn" width="140px" alt="head-pic" />
+         </div>
+          <div class="col-sm-4">
+           <center><h2 class="pie text-light offset-1">Pinkie Pie! :33 </h2> <br>
+          </div>
+        </div>
+    </div>
+</div>
+
+
     <div class="container">
     	<div class="row">
     	<div class="col-sm-6">
-    	<img src="https://static.wikia.nocookie.net/infinite-loops/images/4/4b/Pinkie_pie_4th_wall_by_cptofthefriendship-d4mdrlt.png/revision/latest?cb=20140621023401" width="400px" height="400px" alt="PinkiePie">
+    	<img src="https://static.wikia.nocookie.net/infinite-loops/images/4/4b/Pinkie_pie_4th_wall_by_cptofthefriendship-d4mdrlt.png/revision/latest?cb=20140621023401" width="400px" height="400px" class="imgx" alt="PinkiePie">
     </div>
         <div class="col-sm-6">
         <div class="input">
-        <h2 input1>Find the value of x and y! :333</h1>
+        <h4 input1>Find the value of x and y! :333</h4>
         <div class="form-group">
             <label for="x">Input the value of x:</label><br>
             <input type="number" class="form-control-sm" id="x">
@@ -57,7 +86,9 @@
             <input type="number" class="form-control-sm" id="y">
         </div>
         
-        <br>   
+
+        <br>
+                                <center><p> Click the buttons below to calculate! </p></center>   
         <button onclick="performOperation('addy')" class="btn btn-light text-secondary offset-2">Find the sum of x and y</button>
         <button onclick="performOperation('expo')" class="btn btn-light text-secondary">x raised to y</button> <br>
         <button onclick="performOperation('sub')" class="btn btn-light text-secondary offset-2">Get the remainder</button>
@@ -96,5 +127,10 @@
             }
         }
     </script>
+    
+    <br>
+    <br>
+    <br>
+
 </body>
 </html>
